@@ -1,0 +1,12 @@
+transacoes = [150.0, 3200.5, 12500.0, 450.0, -50.0, 800.0, 0]
+
+
+for transacao in transacoes:
+    if transacao > 10000:
+        print(f"[ALERTA] Transação suspeita de R$ {transacao}: Encaminhada para auditoria.")
+        continue
+    elif transacao <= 0:
+        print(f"[ERRO CRÍTICO] Transação inválida encontrada {transacao}. Interrompendo bot...")
+        break
+    else:
+        print(f"[SUCESSO] Transação de R$ {transacao} processada.")
